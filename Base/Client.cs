@@ -1344,52 +1344,33 @@ namespace Talos.Base
             }
             else
             {
-                /*var bestStaff = Inventory
-                    .Where(item => item.IsStaff && item.ThisStaff.CanUse(Ability, Level, ToNextLevel, TemuairClassFlag))
-                    .FirstOrDefault(item => item.ThisStaff.CastLines[spell.Name] < spell.CastLines &&
-                        (item.ThisStaff.AbilityRequired > staff.AbilityRequired ||
-                        item.ThisStaff.InsightRequired >= staff.InsightRequired ||
-                        (item.ThisStaff.MasterRequired && !staff.MasterRequired)));*/
                 Item bestStaff = null;
 
-                foreach (var item in Inventory)
+                var candidates = Inventory
+                    .Where(item => item.IsStaff &&
+                                   item.ThisStaff.CanUse(Ability, Level, ToNextLevel, TemuairClassFlag) &&
+                                   item.ThisStaff.CastLines.TryGetValue(spell.Name, out byte lines) &&
+                                   lines < spell.CastLines)
+                    .ToList();
+
+                if (candidates.Count == 0)
                 {
-                    if (!item.IsStaff)
-                    {
-                        //Console.WriteLine($"Skipping {item.Name} - Not a staff.");
-                        continue;
-                    }
-
-                    if (!item.ThisStaff.CanUse(Ability, Level, ToNextLevel, TemuairClassFlag))
-                    {
-                        Console.WriteLine($"Skipping {item.Name} - Cannot use staff with current stats.");
-                        continue;
-                    }
-
-                    // Passed the initial filter
-                    Console.WriteLine($"Considering {item.Name} - Passed usability checks.");
-
-                    // Evaluate staff improvement conditions
-                    bool isBetter = item.ThisStaff.CastLines.TryGetValue(spell.Name, out byte itemCastLines) && itemCastLines < spell.CastLines &&
-                        (
-                            item.ThisStaff.AbilityRequired > staff.AbilityRequired ||
-                            item.ThisStaff.InsightRequired >= staff.InsightRequired ||
-                            (item.ThisStaff.MasterRequired && !staff.MasterRequired)
-                        );
-
-                    Console.WriteLine($"Evaluating {item.Name}: CastLines = {itemCastLines}, IsBetter = {isBetter}");
-
-                    if (isBetter)
-                    {
-                        bestStaff = item;
-                        Console.WriteLine($"Selected {item.Name} as the best staff so far.");
-                        break; // or continue to find the best if not using FirstOrDefault logic
-                    }
+                    //Console.WriteLine("No usable staff with better CastLines.");
                 }
-
-                if (bestStaff == null)
+                else if (candidates.Count == 1)
                 {
-                    Console.WriteLine("No suitable staff found.");
+                    bestStaff = candidates[0];
+                    //Console.WriteLine($"Only one candidate with better CastLines: {bestStaff}");
+                }
+                else
+                {
+                    bestStaff = candidates
+                        .OrderByDescending(item => item.ThisStaff.AbilityRequired)
+                        .ThenByDescending(item => item.ThisStaff.InsightRequired)
+                        .ThenByDescending(item => item.ThisStaff.MasterRequired)
+                        .First();
+
+                    //Console.WriteLine($"Multiple candidates found. Selected best staff: {bestStaff}");
                 }
 
                 if (bestStaff != null)
