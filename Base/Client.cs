@@ -1437,89 +1437,16 @@ namespace Talos.Base
         }
         internal void LoadMeleeWeapons()
         {
-            Weapons.Add(new MeleeWeapon("Stick", 0, 1, false, true));
-            Weapons.Add(new MeleeWeapon("Oak Stick", 0, 1, false, true));
-            Weapons.Add(new MeleeWeapon("Dirk", 0, 2, false, true));
-            Weapons.Add(new MeleeWeapon("Eppe", 0, 2, false, true));
-            Weapons.Add(new MeleeWeapon("Loures Saber", 0, 7, false, true));
-            Weapons.Add(new MeleeWeapon("Harpoon", 0, 11, false, true));
-            Weapons.Add(new MeleeWeapon("Hatchet", 0, 13, false, true));
-            Weapons.Add(new MeleeWeapon("Claidheamh", 0, 14, false, true));
-            Weapons.Add(new MeleeWeapon("Broad Sword", 0, 17, false, true));
-            Weapons.Add(new MeleeWeapon("Dragon Scale Sword", 0, 20, false, true));
-            Weapons.Add(new MeleeWeapon("Wooden Club", 0, 50, false, true));
-            Weapons.Add(new MeleeWeapon("Stone Axe", 0, 95, false, true));
-            Weapons.Add(new MeleeWeapon("Amber Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Diamond Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Emerald Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Ruby Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Sapphire Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Master Falcata", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Master Saber", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Eclipse", 0, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Crystal Saber", 65, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Yowien Hatchet", 80, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Defiled Ruby Saber", 95, 99, true, true, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Two-Handed Claidhmore", 0, 71, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Two-Handed Emerald Sword", 0, 77, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Two-Handed Gladius", 0, 86, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Two-Handed Kindjal", 0, 90, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Giant Stone Axe", 0, 93, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Giant Stone Club", 0, 95, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Giant Stone Hammer", 0, 97, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Two-Handed Dragon Slayer", 0, 97, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Hy-brasyl Battle Axe", 0, 99, false, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Gold Kindjal", 0, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Hy-brasy Escalon", 0, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Empowered Escalon", 0, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Enchanted Escalon", 0, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Master Battle Axe", 0, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Dane Blade", 1, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Astion Blade", 8, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Brune Blade", 15, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Veltain Sword", 15, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Tempered Veltain Sword", 15, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Tuned Veltain Sword", 15, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Blazed Veltain Sword", 15, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Grum Blade", 22, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Andor Saber", 30, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Hwarone Guandao", 45, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Empowered Hwarone Guandao", 55, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Hellreavers Blade", 90, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Ancient Hy-brasyl Axe", 99, 99, true, false, TemuairClass.Warrior));
-            Weapons.Add(new MeleeWeapon("Blackstar Night Claw", 95, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Eagles Grasp", 90, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Yowien's Fist", 80, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Yowien's Fist1", 80, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Yowien's Claw", 65, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Yowien's Claw1", 65, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Stone Fists", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Phoenix Claws", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Enchanted Kalkuri", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Obsidian", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Nunchaku", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Tilian Claw", 0, 99, true, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Wolf Claw", 0, 50, false, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Wolf Claws", 0, 50, false, true, TemuairClass.Monk));
-            Weapons.Add(new MeleeWeapon("Ancient Hy-brasyl Azoth", 99, 99, true, true, TemuairClass.Rogue));
-            Weapons.Add(new MeleeWeapon("Inferno Blade", 90, 99, true, true, TemuairClass.Rogue));
-            Weapons.Add(new MeleeWeapon("Blackstar Whip", 95, 99, true, true, TemuairClass.Rogue));
-            Weapons.Add(new MeleeWeapon("Andor Whip", 30, 99, true, true, TemuairClass.Rogue));
-            Weapons.Add(new MeleeWeapon("Thunderfury", 90, 99, true, false, TemuairClass.Rogue));
-            Weapons.Add(new MeleeWeapon("Ancient Hy-brasyl Tonfa", 99, 99, true, true, TemuairClass.Monk));
+            Weapons.AddRange(WeaponRegistry.MeleeWeapons.Values);
 
             foreach (Item i in Inventory)
             {
-                // Find the matching weapon, if it exists
-                MeleeWeapon matchingWeapon = Weapons.FirstOrDefault(s => s.Name == i.Name);
-
-                if (matchingWeapon != null)
+                if (WeaponRegistry.MeleeWeapons.TryGetValue(i.Name, out MeleeWeapon matchingWeapon))
                 {
                     i.IsMeleeWeapon = true;
                     i.ThisWeapon = matchingWeapon;
                 }
             }
-
         }
         internal void LoadStavesAndBows()
         {
@@ -1595,81 +1522,10 @@ namespace Talos.Base
                 }
             }
 
-            Bows.Add(new Bow("Wooden Bow", 1, 1));
-            Bows.Add(new Bow("Royal Bow", 8, 2));
-            Bows.Add(new Bow("Jenwir Bow", 15, 3));
-            Bows.Add(new Bow("Sen Bow", 22, 4));
-            Bows.Add(new Bow("Andor Bow", 30, 4));
-            Bows.Add(new Bow("Yumi Bow", 45, 5));
-            Bows.Add(new Bow("Empowered Yumi Bow", 55, 6));
-            Bows.Add(new Bow("Thunderfury", 90, 6));
-            Staffs.Add(new Staff("Barehand", new Dictionary<string, byte>(StaffSpells), 0, 0, false));
-            Staffs.Add(new Staff("Magus Zeus", fourLinesBecome2Lines, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Ares", cradhOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Diana", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Deoch", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Gramail", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Luathas", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Glioca", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Cail", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Sgrios", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Ceannlaidir", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Magus Fiosachd", minusOneLine, 0, 19, false, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Holy Deoch", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Gramail", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Luathas", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Glioca", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Cail", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Sgrios", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Ceannlaidir", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Fiosachd", minusOneLine, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Diana", minusTwoLines, 0, 19, false, TemuairClass.Priest));
-            Staffs.Add(new Staff("Assassin's Cross", minusTwoLines, 27, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Veltain Staff", minusTwoLines, 15, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Andor Staff", minusTwoLines, 30, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Skylight Staff", minusTwoLines, 75, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Star Crafted Staff", minusTwoLines, 95, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Divinities Staff", minusTwoLines, 75, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Dark Star", minusTwoLines, 95, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Master Celestial Staff", masterOneLine, 0, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Enchanted Magus Orb", masterOneLine, 0, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Staff of Ages", masterOneLine, 0, 99, true));
-            Staffs.Add(new Staff("Staff of Brilliance", masterOneLine, 0, 99, true));
-            Staffs.Add(new Staff("Staff of Deliverance", masterOneLine, 25, 99, true));
-            Staffs.Add(new Staff("Staff of Clarity", masterOneLine, 50, 99, true));
-            Staffs.Add(new Staff("Staff of Eternity", masterOneLine, 75, 99, true));
-            Staffs.Add(new Staff("Empowered Magus Orb", oneLine, 0, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Sphere", oneLine, 1, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Shaine Sphere", oneLine, 8, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Maron Sphere", oneLine, 15, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Chernol Sphere", oneLine, 22, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Serpant Sphere", oneLine, 45, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Empowered Serpant Sphere", oneLine, 55, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Glimmering Wand", oneLine, 65, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Glimmering Wand1", oneLine, 65, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Yowien Tree Staff", oneLine, 80, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Yowien Tree Staff1", oneLine, 80, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Dragon Infused Staff", oneLine, 90, 99, true, TemuairClass.Wizard));
-            Staffs.Add(new Staff("Wooden Harp", oneLine, 1, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Goldberry Harp", oneLine, 8, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Rosewood Harp", oneLine, 15, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Ironwood Harp", oneLine, 22, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Hwarone Lute", oneLine, 45, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Empowered Hwarone Lute", oneLine, 55, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Hy-brasyl Baton", oneLine, 65, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Holy Hy-brasyl Baton1", oneLine, 65, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Brute's Quill", oneLine, 80, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Brute's Quill1", oneLine, 80, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Dragon Emberwood Staff", oneLine, 90, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Master Divine Staff", masterPriest, 0, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Empowered Holy Gnarl", cradhZeroLine, 0, 99, true, TemuairClass.Priest));
-            Staffs.Add(new Staff("Eagles Grasp", StaffSpells, 90, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Yowien's Fist", StaffSpells, 80, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Yowien's Fist1", StaffSpells, 80, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Yowien's Claw", StaffSpells, 65, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Yowien's Claw1", StaffSpells, 65, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Blackstar Night Claw", StaffSpells, 95, 99, true, TemuairClass.Monk));
-            Staffs.Add(new Staff("Ancient Hy-brasyl Tonfa", StaffSpells, 99, 99, true, TemuairClass.Monk));
+            Bows.AddRange(WeaponRegistry.Bows.Values);
+            Staffs.AddRange(WeaponRegistry.BuildStaffs(
+                StaffSpells, minusOneLine, minusTwoLines, masterOneLine, oneLine,
+                masterPriest, cradhZeroLine, fourLinesBecome2Lines, cradhOneLine));
             // Add Arsaid Aon weapons?
         }
         internal void CheckWeaponType(Item item)
@@ -1679,15 +1535,15 @@ namespace Talos.Base
                 item.IsStaff = true;
                 item.ThisStaff = Staffs.First(Staff => Staff.Name == item.Name);
             }
-            if (Bows.Any(Bow => Bow.Name == item.Name))
+            if (WeaponRegistry.Bows.TryGetValue(item.Name, out Bow bow))
             {
                 item.IsBow = true;
-                item.ThisBow = Bows.First(Bow => Bow.Name == item.Name);
+                item.ThisBow = bow;
             }
-            if (Weapons.Any(MeleeWeapon => MeleeWeapon.Name == item.Name))
+            if (WeaponRegistry.MeleeWeapons.TryGetValue(item.Name, out MeleeWeapon meleeWeapon))
             {
                 item.IsMeleeWeapon = true;
-                item.ThisWeapon = Weapons.First(MeleeWeapon => MeleeWeapon.Name == item.Name);
+                item.ThisWeapon = meleeWeapon;
             }
         }
 

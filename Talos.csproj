@@ -282,6 +282,7 @@
     <Compile Include="Objects\Spellbook.cs" />
     <Compile Include="Objects\Staff.cs" />
     <Compile Include="Objects\VisibleObject.cs" />
+    <Compile Include="Objects\WeaponRegistry.cs" />
     <Compile Include="Objects\WorldObject.cs" />
     <Compile Include="Forms\Options\SpriteOverride.cs">
       <SubType>UserControl</SubType>

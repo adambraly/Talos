@@ -1118,7 +1118,7 @@ namespace Talos.Base
             equipattempted = false;
             //Console.WriteLine("[DEBUG] Entering EnsureWeaponEquipped method...");
             string equippedWeapName = Client.EquippedItems[1]?.Name;
-            bool hasValidWeapon = Client.Weapons.Any(w => equippedWeapName != null && equippedWeapName.Equals(w.Name));
+            bool hasValidWeapon = equippedWeapName != null && WeaponRegistry.MeleeWeapons.ContainsKey(equippedWeapName);
 
             if (hasValidWeapon)
             {

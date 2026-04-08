@@ -2683,7 +2683,7 @@ namespace Talos
 
             // Find the staff or bow in the respective lists
             Staff foundStaff = client.Staffs.FirstOrDefault(staff => staff.Name == itemName);
-            Bow foundBow = client.Bows.FirstOrDefault(bow => bow.Name == itemName);
+            WeaponRegistry.Bows.TryGetValue(itemName, out Bow foundBow);
 
             // Update the item properties based on what was found
             if (foundStaff != null)
