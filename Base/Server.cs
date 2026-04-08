@@ -3452,7 +3452,6 @@ namespace Talos
 
         /// <summary>
         /// Function to load the map cache from the resources maps.dat
-        /// Currently unused because this is being handled by the application called MapCacheEditor
         /// </summary>
         /// <returns></returns>
         private bool LoadMapCache()
