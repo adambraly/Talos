@@ -1310,10 +1310,13 @@ namespace Talos.Base
             if (hasArcherSpells && int.TryParse(Skillbook.SkillbookDictionary.Keys.FirstOrDefault((string string_0) => string_0.Contains("Archery ")).Replace("Archery ", ""), out int currentArcherySkill))
             {
                 var equippedBow = EquippedItems[1]?.ThisBow;
-                var bestBow = Inventory.Where(i => i.IsBow && i.ThisBow.CanUse(Ability, currentArcherySkill) && i.ThisBow.AbilityRequired > equippedBow?.AbilityRequired)
-                                       .Select(i => i.ThisBow)
-                                       .OrderByDescending(b => b.AbilityRequired)
-                                       .FirstOrDefault();
+                var bestBow = Inventory
+                    .Where(i => i.IsBow
+                             && i.ThisBow.CanUse(Ability, currentArcherySkill)
+                             && (equippedBow == null || i.ThisBow.AbilityRequired > equippedBow.AbilityRequired))
+                    .Select(i => i.ThisBow)
+                    .OrderByDescending(b => b.AbilityRequired)
+                    .FirstOrDefault();
 
                 if (bestBow != null)
                 {
@@ -1549,30 +1552,13 @@ namespace Talos.Base
 
         internal string EquipBow()
         {
-            // Mapping of bow names to their required ability level.
-            var bowRequirements = new Dictionary<string, int>
-            {
-                { "Wooden Bow", 1 },
-                { "Royal Bow", 8 },
-                { "Jenwir Bow", 15 },
-                { "Sen Bow", 22 },
-                { "Andor Bow", 30 },
-                { "Yumi Bow", 45 },
-                { "Empowered Yumi Bow", 55 },
-                { "Thunderfury", 95 }
-            };
-
-            // Select distinct bow names from Inventory that are present in bowRequirements.
-            var availableBows = Inventory
+            var candidateBow = Inventory
                 .Select(item => item.Name)
-                .Where(name => bowRequirements.ContainsKey(name))
-                .Distinct();
-
-            // Choose the bow with the highest required ability that is still within our current ability.
-            var candidateBow = availableBows
-                .Select(name => new { Name = name, Requirement = bowRequirements[name] })
-                .Where(b => b.Requirement <= (int)Ability)
-                .OrderByDescending(b => b.Requirement)
+                .Distinct()
+                .Where(name => WeaponRegistry.Bows.ContainsKey(name))
+                .Select(name => WeaponRegistry.Bows[name])
+                .Where(bow => bow.AbilityRequired <= (int)Ability)
+                .OrderByDescending(bow => bow.AbilityRequired)
                 .FirstOrDefault();
 
             if (candidateBow == null)
